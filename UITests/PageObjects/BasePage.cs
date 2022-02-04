@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace TestingBooking
+namespace TestingBooking.PageObjects
 {
     public class BasePage
     {

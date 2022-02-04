@@ -151,7 +151,9 @@ namespace ApiTests
                 case "10":
                 case "11":
                     return "autumn";
-                default: return null;
+
+                default: 
+                    return null;
             }
         }
     }

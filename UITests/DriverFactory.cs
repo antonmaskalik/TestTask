@@ -6,13 +6,16 @@ namespace TestingBooking
 {
     public static class DriverFactory
     {
-        static IWebDriver driver;
+        static IWebDriver driver = null;
 
         public static IWebDriver InitDriver()
         {
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(11);
+            if(driver == null)
+            {
+                driver = new ChromeDriver();
+                driver.Manage().Window.Maximize();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(11);
+            }
 
             return driver;
         }

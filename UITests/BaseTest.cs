@@ -8,13 +8,13 @@ namespace TestingBooking
         protected IWebDriver driver;
 
         [SetUp]
-        public void TestSetUp()
+        public void SetUp()
         {
             driver = DriverFactory.InitDriver();
         }
-
-        [TearDown]
-        public void TestTearDown()
+        
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
         {
             driver.Quit();
         }
